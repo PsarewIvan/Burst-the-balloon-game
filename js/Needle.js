@@ -6,8 +6,10 @@ class Needle {
     this.context = context;
     this.init();
 
-    document.addEventListener('keydown', this.onKeyDown.bind(this));
-    document.addEventListener('keyup', this.onKeyUp.bind(this));
+    this.keyDownHandler = this.onKeyDown.bind(this);
+    this.keyUpHandler = this.onKeyUp.bind(this);
+    document.addEventListener('keydown', this.keyDownHandler);
+    document.addEventListener('keyup', this.keyUpHandler);
   }
 
   init() {
@@ -72,5 +74,11 @@ class Needle {
     if (evt.key === 'ArrowRight') {
       this.rightKey = false;
     }
+  }
+
+  removeListeners() {
+    console.log('re');
+    document.removeEventListener('keydown', this.keyDownHandler);
+    document.removeEventListener('keyup', this.keyUpHandler);
   }
 }

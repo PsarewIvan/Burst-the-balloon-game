@@ -71,6 +71,7 @@ class Game {
         this.isGameEnd = true;
         this.endCallback();
         this.blurCanvas();
+        this.needle.removeListeners();
       }
 
       if (this.gameTime >= this.TIMER) {
