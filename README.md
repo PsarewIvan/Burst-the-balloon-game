@@ -1,5 +1,7 @@
 # Мини-игра "Лопни шарик!"
 
+[Попробуй выиграть тут!](https://psarewivan.github.io/Burst-the-balloon-game/)
+
 ## Описание
 
 Пет-проект небольшой игры реализованной на JavaScript с применением Canvas.
