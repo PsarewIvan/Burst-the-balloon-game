@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circles</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="main__title">Burst the balloon!</h1>
+      <div class="main__game game">
+        <div class="game__canvas-wrapper">
+          <canvas class="game__canvas js-canvas"></canvas>
+          <div class="modal js-modal-start">
+            <p class="modal__description">
+              Using the LEFT-ARROW and RIGHT-ARROW to control the needle at the
+              top of the screen. Pop as many balloons as possible in one minute.
+            </p>
+            <button class="modal__button js-button-start" type="button">
+              Start game!
+            </button>
+          </div>
+          <div class="modal js-modal-end">
+            <p class="modal__description">
+              Your results: <br />
+              Hints: <span class="js-hints">0</span><br />
+              Skipped: <span class="js-skipped">0</span><br />
+            </p>
+            <button class="modal__button js-button-replay" type="button">
+              Try again!
+            </button>
+          </div>
+        </div>
+        <div class="game__panel">
+          <ul class="panel">
+            <li class="panel__item">
+              TIMER: <span class="js-timer">00:00</span>
+            </li>
+            <li class="panel__item">Hints: <span class="js-hints">0</span></li>
+            <li class="panel__item">
+              Skipped: <span class="js-skipped">0</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./js/Ball.js"></script>
+    <script src="./js/Needle.js"></script>
+    <script src="./js/Wind.js"></script>
+    <script src="./js/Game.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
